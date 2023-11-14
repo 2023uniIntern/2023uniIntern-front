@@ -5,7 +5,7 @@ import Video from '../components/Video'
 
 const HomePage = () => {
   return (
-    <div className='mx-auto px-6 py-3'>
+    <div className='mx-auto p-3 gap-4'>
       {/* 헤더 */}
       <Header />
 

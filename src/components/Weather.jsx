@@ -45,6 +45,7 @@ const Weather = () => {
         return () => {
             clearInterval(intervalID);
         };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     // 날씨 코드 한글화 작업
@@ -132,10 +133,18 @@ const Weather = () => {
 
 
     return (
-        <div className='grid grid-cols-12 p-7 border border-gray-400'>
+        <div className='grid grid-cols-12 p-7 mt-3 border border-gray-400'>
+
+            {/* 날짜, 시간, 날씨 정보 */}
             <div className='col-span-11'>
-                <p className='cursor-default text-lg' >{formattedTime} 현재 : {weather?.main.temp}°C {getWeatherDescription(weather?.weather[0].id)}</p>
+                <p className='cursor-default text-lg' >
+                    <span>{formattedTime}</span> &nbsp;
+                    <span>현재 : {weather?.main.temp}°C</span> &nbsp;
+                    <span>{getWeatherDescription(weather?.weather[0].id)}</span>
+                </p>
             </div>
+
+            {/* 새로고침 버튼 */}
             <div className='col-span-1 flex justify-center items-center'>
                 <button onClick={handleRefreshClick} disabled={refreshing}>
                     {refreshing ? <FontAwesomeIcon icon={faRotateRight} spin size='lg' /> : <FontAwesomeIcon icon={faRotateRight} size='lg' />}
