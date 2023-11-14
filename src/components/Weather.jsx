@@ -132,7 +132,7 @@ const Weather = () => {
 
 
     return (
-        <div className='col-span-6 grid grid-cols-6'>
+        <div className='grid grid-cols-6'>
             <div className='col-span-4'>
                 <p>{formattedTime} 현재 : {weather?.main.temp}°C</p>
                 <p>{getWeatherDescription(weather?.weather[0].id)}</p>

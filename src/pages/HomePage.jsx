@@ -5,13 +5,23 @@ import Weather from '../components/Weather'
 const HomePage = () => {
   return (
     <div className='mx-auto px-6 py-3'>
-      <Header></Header>
+      {/* 헤더 */}
+      <Header />
+
+      {/* 메인 */}
       <div className='grid grid-cols-12'>
+        {/* 좌측 */}
+        <div className='col-span-6 '>
+          <Weather />
+        </div>
+        {/* 우측 */}
+        <div className='col-span-6 '>
 
-        <Weather/>
-
+        </div>
 
       </div>
+
+
     </div>
   )
 }
