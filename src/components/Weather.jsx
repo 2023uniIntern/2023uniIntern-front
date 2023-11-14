@@ -14,7 +14,7 @@ const Weather = () => {
             // 현재 위치 정보
             let lat = position.coords.latitude;
             let lon = position.coords.longitude;
-            console.log("현재 위치", lat, lon);
+            // console.log("현재 위치", lat, lon);
             getWeatherByCurrentLocation(lat, lon);
         });
     };
