@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from '../components/Header'
 import Weather from '../components/Weather'
+import Video from '../components/Video'
 
 const HomePage = () => {
   return (
@@ -13,6 +14,7 @@ const HomePage = () => {
         {/* 좌측 */}
         <div className='col-span-6 '>
           <Weather />
+          <Video/>
         </div>
         {/* 우측 */}
         <div className='col-span-6 '>
