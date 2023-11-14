@@ -132,14 +132,13 @@ const Weather = () => {
 
 
     return (
-        <div className='grid grid-cols-6'>
-            <div className='col-span-4'>
-                <p>{formattedTime} 현재 : {weather?.main.temp}°C</p>
-                <p>{getWeatherDescription(weather?.weather[0].id)}</p>
+        <div className='grid grid-cols-12 p-7 border border-gray-400'>
+            <div className='col-span-11'>
+                <p className='cursor-default text-lg' >{formattedTime} 현재 : {weather?.main.temp}°C {getWeatherDescription(weather?.weather[0].id)}</p>
             </div>
-            <div className='col-span-2'>
+            <div className='col-span-1 flex justify-center items-center'>
                 <button onClick={handleRefreshClick} disabled={refreshing}>
-                    {refreshing ? <FontAwesomeIcon icon={faRotateRight} spin /> : <FontAwesomeIcon icon={faRotateRight} />}
+                    {refreshing ? <FontAwesomeIcon icon={faRotateRight} spin size='lg' /> : <FontAwesomeIcon icon={faRotateRight} size='lg' />}
                 </button>
             </div>
         </div>

@@ -9,7 +9,7 @@ const HomePage = () => {
       <Header />
 
       {/* 메인 */}
-      <div className='grid grid-cols-12'>
+      <div className='grid grid-cols-12 p-3'>
         {/* 좌측 */}
         <div className='col-span-6 '>
           <Weather />
