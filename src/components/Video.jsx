@@ -47,7 +47,7 @@ class Video extends Component {
               src={this.state.videoUrl}
               alt="Streaming from Flask Server"
               onError={this.handleVideoError}
-              style={{ width: '80%' }} // 영상을 적절한 크기로 표시
+              style={{ width: '100%' }} // 영상을 적절한 크기로 표시
             />
           )}
         </div>
