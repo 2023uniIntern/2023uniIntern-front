@@ -33,25 +33,26 @@ class Video extends Component {
 
   render() {
     return (
-      <div>
-        <div className="border border-gray-400 mt-6 flex justify-center">
-          {this.state.serverConnectionFailed ? (
-            // 서버 연결 실패 시 보여지는 UI
-            <div>
-              <p>서버와의 연결에 실패했습니다.</p>
-              <button onClick={this.retryConnection}>다시 시도하기</button>
-            </div>
-          ) : (
-            // 서버 연결이 성공적인 경우 비디오 스트리밍을 표시하는 img 태그
-            <img
-              src={this.state.videoUrl}
-              alt="Streaming from Flask Server"
-              onError={this.handleVideoError}
-              style={{ width: '100%' }} // 영상을 적절한 크기로 표시
-            />
-          )}
-        </div>
+      <div className="border border-gray-400 flex justify-center">
+
+
+        {this.state.serverConnectionFailed ? (
+          // 서버 연결 실패 시 보여지는 UI
+          <div>
+            <p>서버와의 연결에 실패했습니다.</p>
+            <button onClick={this.retryConnection}>다시 시도하기</button>
+          </div>
+        ) : (
+          // 서버 연결이 성공적인 경우 비디오 스트리밍을 표시하는 img 태그
+          <img
+            src={this.state.videoUrl}
+            alt="Streaming from Flask Server"
+            onError={this.handleVideoError}
+            style={{ width: '100%' }}
+          />
+        )}
       </div>
+
     );
   }
 }
