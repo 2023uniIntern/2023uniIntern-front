@@ -13,7 +13,6 @@ const Header = () => {
                     <a href="/" className="py-2 px-2 text-gray-400 hover:text-gray-800">홈</a>
                     <a href="/" className="py-2 px-2 text-gray-400 hover:text-gray-800">CCTV</a>
                     <a href="/" className="py-2 px-2 text-gray-400 hover:text-gray-800">발생현황</a>
-                    <a href="/" className="py-2 px-2 text-gray-400 hover:text-gray-800">구조도</a>
                 </div>
             </div>
             {/* 밑줄 */}

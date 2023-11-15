@@ -10,38 +10,34 @@ const HomePage = () => {
       <Header />
 
       {/* 메인 */}
-      <div className='grid grid-cols-12 p-3'>
-        {/* 좌측 */}
-        <div className='col-span-6 grid grid-cols-6'>
-
-          {/* 날씨 박스 */}
-          <div className='col-span-6'>
+      <div className='grid grid-cols-12'>
+        {/* 첫줄 */}
+        <div className='col-span-12 grid grid-cols-6 mt-6'>
+          {/* 시간 & 날씨 박스 */}
+          <div className='col-span-3'>
             <Weather />
           </div>
-          {/* 비디오 박스 */}
-          <div className='mt-6 col-span-6'>
-            <span>Live</span>
-            <span>현재시간</span>
+          {/* 알림 박스 */}
+          <div className='col-span-3'>
+
           </div>
+        </div>
+
+
+        <div className='col-span-12 grid grid-cols-6 mt-6'>
+
+
+          {/* 시간 &  비디오 박스 */}
           <div className='col-span-3'>
             <Video />
           </div>
+
           {/* <div className='col-span-3'>
             열화상카메라용
             <Video />
-
           </div> */}
-
-
         </div>
-        {/* 우측 */}
-        <div className='col-span-6 '>
-
-        </div>
-
       </div>
-
-
     </div>
   )
 }

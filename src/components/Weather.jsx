@@ -3,9 +3,9 @@ import { useEffect, useState } from 'react';
 // 컴포넌트
 import Clock from './Clock';
 
-// 외부API
+// 외부API(아이콘)
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faRotateRight } from '@fortawesome/free-solid-svg-icons';
+import { faDroplet, faRotateRight, faTemperatureHalf } from '@fortawesome/free-solid-svg-icons';
 
 const WeatherTest = () => {
 
@@ -45,6 +45,7 @@ const WeatherTest = () => {
 
     useEffect(() => {
         getCurrentLocation();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const getIconUrl = (iconCode) => {
@@ -54,6 +55,7 @@ const WeatherTest = () => {
 
     return (
         <div className="max-w-sm mx-auto bg-white rounded-lg shadow-md overflow-hidden cursor-default">
+
             <div className="p-5">
                 <div className="flex justify-center items-center">
                     <div>
@@ -64,23 +66,21 @@ const WeatherTest = () => {
                 <div className="flex justify-center items-center">
                     <div className="mt-3 flex justify-between items-center">
                         {weather && weather.weather && weather.weather[0] && (
-                            <img src={getIconUrl(weather.weather[0].icon)} alt="Weather Icon"/>
+                            <img src={getIconUrl(weather.weather[0].icon)} alt="Weather Icon" />
                         )}
                     </div>
                 </div>
 
                 <div className="flex grid grid-cols-2 text-center">
                     <div className='col-span-1'>
-                        <span className="text-gray-500">온도</span>
+                        <span className="text-gray-500">  <FontAwesomeIcon icon={faTemperatureHalf} />온도</span>
                         <span className="block text-xl font-bold">{weather?.main.temp.toFixed(1)}°C</span>
-                    </div> 
+                    </div>
                     <div className='col-span-1'>
-                        <span className="block text-gray-500">습도</span>
+                        <span className="block text-gray-500"> <FontAwesomeIcon icon={faDroplet} />습도</span>
                         <span className="block text-xl font-bold">{weather?.main.humidity}%</span>
                     </div>
                 </div>
-
-
             </div>
 
             <div className="bg-gray-100 p-5">
@@ -91,6 +91,7 @@ const WeatherTest = () => {
                     </button>
                 </div>
             </div>
+
         </div>
     )
 }
