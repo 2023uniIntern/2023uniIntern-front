@@ -37,11 +37,11 @@ const Video = () => {
   return (
     <div className="bg-black rounded-lg shadow-md flex justify-center items-center overflow-hidden cursor-default">
       {isLoading ? (
-        <div className="w-full text-white text-center p-3 flex items-center justify-center" style={{ height: '350px' }}>
+        <div className="w-full text-white text-center p-3 flex items-center justify-center" style={{ height: '320px' }}>
           <FontAwesomeIcon icon={faSpinner} spinPulse size="2xl" />
         </div>
       ) : error ? (
-        <div className="w-full text-white text-center p-3 flex flex-col items-center justify-center" style={{ height: '350px' }}>
+        <div className="w-full text-white text-center p-3 flex flex-col items-center justify-center" style={{ height: '320px' }}>
           <p className="block">{error}</p>
           <p className='block mt-5 hover:bg-white hover:text-black rounded-full border border-white p-3 cursor-pointer'
             onClick={reconnectStream}>
