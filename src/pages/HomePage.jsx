@@ -28,11 +28,11 @@ const HomePage = () => {
             <Video />
 
           </div>
-          <div className='col-span-3'>
+          {/* <div className='col-span-3'>
             열화상카메라용
             <Video />
 
-          </div>
+          </div> */}
 
 
         </div>

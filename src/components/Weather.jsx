@@ -138,7 +138,7 @@ const Weather = () => {
             {/* 날짜, 시간, 날씨 정보 */}
             <div className='col-span-11'>
                 <p className='cursor-default text-lg' >
-                    <span>{formattedTime}</span> &nbsp;
+                    <span>{formattedTime}</span> <br/>
                     <span>현재 : {weather?.main.temp}°C</span> &nbsp;
                     <span>{getWeatherDescription(weather?.weather[0].id)}</span>
                 </p>
