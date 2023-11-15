@@ -85,7 +85,7 @@ const WeatherTest = () => {
 
             <div className="bg-gray-100 p-5">
                 <div className="flex justify-between items-center">
-                    <span className="text-gray-700 text-sm">UPDATE</span>
+                    <span className="text-gray-700 text-sl font-bold">UPDATE</span>
                     <button onClick={handleRefreshClick} disabled={refreshing}>
                         {refreshing ? <FontAwesomeIcon icon={faRotateRight} spin size='lg' /> : <FontAwesomeIcon icon={faRotateRight} size='lg' />}
                     </button>

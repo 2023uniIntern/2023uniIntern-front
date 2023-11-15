@@ -29,7 +29,7 @@ const Video = () => {
   };
 
   return (
-    <div>
+    <div className="bg-black rounded-lg shadow-md flex justify-center items-center overflow-hidden cursor-default">
       {error ? (
         <>
           <p>{error}</p>
