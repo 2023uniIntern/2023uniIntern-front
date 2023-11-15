@@ -5,7 +5,7 @@ import Video from '../components/Video'
 
 const HomePage = () => {
   return (
-    <div className='mx-auto p-3 gap-4'>
+    <div className='container mx-auto p-3 gap-4'>
       {/* 헤더 */}
       <Header />
 
@@ -16,7 +16,7 @@ const HomePage = () => {
 
           {/* 날씨 박스 */}
           <div className='col-span-6'>
-          <Weather />
+            <Weather />
           </div>
           {/* 비디오 박스 */}
           <div className='mt-6 col-span-6'>

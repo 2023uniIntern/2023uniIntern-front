@@ -31,7 +31,7 @@ const WeatherTest = () => {
         let data = await response.json();
         // weather에 데이터 담기
         setWeather(data);
-        console.log(weather); // 날씨 정보
+        // console.log(weather); // 날씨 정보
     };
 
     const handleRefreshClick = () => {
@@ -49,35 +49,38 @@ const WeatherTest = () => {
 
     const getIconUrl = (iconCode) => {
         // 아이콘 이미지를 가져올 URL
-        return `https://openweathermap.org/img/wn/${iconCode}.png`;
+        return `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
     };
 
     return (
-        <div className="max-w-sm mx-auto bg-white rounded-lg shadow-md overflow-hidden">
+        <div className="max-w-sm mx-auto bg-white rounded-lg shadow-md overflow-hidden cursor-default">
             <div className="p-5">
                 <div className="flex justify-center items-center">
                     <div>
-                        <span className="cursor-default text-gray-700 text-lg"><Clock /></span>
+                        <span className="text-gray-700 text-lg font-bold"><Clock /></span>
                     </div>
                 </div>
-                
+
                 <div className="flex justify-center items-center">
                     <div className="mt-3 flex justify-between items-center">
                         {weather && weather.weather && weather.weather[0] && (
-                            <img src={getIconUrl(weather.weather[0].icon)} alt="Weather Icon" />
+                            <img src={getIconUrl(weather.weather[0].icon)} alt="Weather Icon"/>
                         )}
                     </div>
                 </div>
 
-                <div>
-                    <span className="block text-gray-500">온도</span>
-                    <span className="block text-xl font-bold">{weather?.main.temp.toFixed(1)}°C</span>
+                <div className="flex grid grid-cols-2 text-center">
+                    <div className='col-span-1'>
+                        <span className="text-gray-500">온도</span>
+                        <span className="block text-xl font-bold">{weather?.main.temp.toFixed(1)}°C</span>
+                    </div> 
+                    <div className='col-span-1'>
+                        <span className="block text-gray-500">습도</span>
+                        <span className="block text-xl font-bold">{weather?.main.humidity}%</span>
+                    </div>
                 </div>
 
-                <div>
-                    <span className="block text-gray-500">습도</span>
-                    <span className="block text-xl font-bold">{weather?.main.humidity}%</span>
-                </div>
+
             </div>
 
             <div className="bg-gray-100 p-5">
