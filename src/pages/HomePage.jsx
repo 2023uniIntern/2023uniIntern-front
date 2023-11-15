@@ -15,7 +15,7 @@ const HomePage = () => {
         <div className='col-span-6 grid grid-cols-6'>
 
           {/* 날씨 박스 */}
-          <div className='col-span-6 '>
+          <div className='col-span-6'>
           <Weather />
           </div>
           {/* 비디오 박스 */}
@@ -24,9 +24,7 @@ const HomePage = () => {
             <span>현재시간</span>
           </div>
           <div className='col-span-3'>
-            일반카메라용
             <Video />
-
           </div>
           {/* <div className='col-span-3'>
             열화상카메라용
