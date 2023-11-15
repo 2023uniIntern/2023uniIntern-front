@@ -35,7 +35,7 @@ const Video = () => {
   };
 
   return (
-    <div className="bg-black rounded-lg shadow-md flex justify-center items-center overflow-hidden cursor-default">
+    <div className="bg-black rounded-lg shadow-xl flex justify-center items-center overflow-hidden cursor-default">
       {isLoading ? (
         <div className="w-full text-white text-center p-3 flex items-center justify-center" style={{ height: '320px' }}>
           <FontAwesomeIcon icon={faSpinner} spinPulse size="2xl" />
