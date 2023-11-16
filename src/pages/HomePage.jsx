@@ -2,6 +2,7 @@ import React from 'react'
 import Header from '../components/Header'
 import Weather from '../components/Weather'
 import Video from '../components/Video'
+import VideoTest from '../components/VideoTest'
 
 const HomePage = () => {
   return (
